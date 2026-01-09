@@ -3,9 +3,9 @@ import re
 import shutil
 
 # Paths (using raw strings to handle Windows backslashes correctly)
-posts_dir = r"C:\Users\mruna\Documents\Portfolio\blogs\content\posts"
-attachments_dir = r"C:\Users\mruna\Documents\Portfolio\blogs\content\posts\images"
-static_images_dir = r"C:\Users\mruna\Documents\Portfolio\blogs\static\images"
+posts_dir = r"C:\Users\mruna\Documents\Portfolio\BlogVerse\content\posts"
+attachments_dir = r"C:\Users\mruna\Documents\Portfolio\BlogVerse\content\posts\images"
+static_images_dir = r"C:\Users\mruna\Documents\Portfolio\BlogVerse\static\images"
 
 # Step 1: Process each markdown file in the posts directory
 for filename in os.listdir(posts_dir):
