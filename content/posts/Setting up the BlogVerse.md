@@ -354,11 +354,25 @@ So you do need to use:
  4. Push to GitHub Repo using GitHub Desktop (1 click action)
 
 Your post will be deployed on your website like `mrunalnshah.github.io/BlogVerse/`
-
 ## Thanks to PowerShell, we can automate.
 I haven't done it yet. I just use this 3 commands for now. If i were to shorten this process making a MEGA Script for PowerShell to automate, I will update this blog and post it here!
 
 If you make a Mega Script, help me add it here!
+## Bonus Step: Get yourself on Google Search
+1. Go to: https://search.google.com/search-console/about
+2. Click `Start now`
+3. Click `Add property > URL prefix`
+4. Enter: `https://mrunalnshah.github.io/BlogVerse/`
+5. It will generate a file, download that file and copy it into your Hugo website path `BlogVerse/public/`. Just like below:
+	```
+	public/
+	├── index.html
+	├── sitemap.xml
+	├── google123abc456def.html   ✅	
+	```
+6. Push the code to GitHub.
+7. Go back to the previous website to click `verify`.
+8. Done!
 
 ***Thanks and all hail open source,***
 Mrunal Nirajkumar Shah.
