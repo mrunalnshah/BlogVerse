@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mrunalnshah</title><link>https://mrunalnshah.github.io/BlogVerse/posts/</link><description>Recent content in Posts on mrunalnshah</description><generator>Hugo</generator><language>en-us</language><copyright>© mrunalnshah</copyright><lastBuildDate>Fri, 09 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mrunalnshah.github.io/BlogVerse/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>BlogVerse and its setup</title><link>https://mrunalnshah.github.io/BlogVerse/posts/setting-up-the-blogverse/</link><pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate><guid>https://mrunalnshah.github.io/BlogVerse/posts/setting-up-the-blogverse/</guid><description>&lt;h1 id="my-first-blog"&gt;My First Blog&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mrunalnshah</title><link>https://mrunalnshah.github.io/BlogVerse/posts/</link><description>Recent content in Posts on mrunalnshah</description><generator>Hugo</generator><language>en-us</language><copyright>© mrunalnshah</copyright><lastBuildDate>Fri, 09 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mrunalnshah.github.io/BlogVerse/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>BlogVerse and its setup</title><link>https://mrunalnshah.github.io/BlogVerse/posts/setting-up-the-blogverse/</link><pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate><guid>https://mrunalnshah.github.io/BlogVerse/posts/setting-up-the-blogverse/</guid><description>&lt;h2 id="my-first-blog"&gt;My First Blog&lt;/h2&gt;
 &lt;p&gt;This is my first blog. So&amp;hellip;Hello!&lt;/p&gt;
 &lt;h1 id="what-is-blogverse"&gt;What is BlogVerse&lt;/h1&gt;
 &lt;p&gt;BlogVerse is my personal blogging website where I publish my blogs. This is a sync between Obsidian, Hugo and GitHub Pages.&lt;/p&gt;
-&lt;h1 id="what-we-need-for-windows"&gt;What we need (for Windows)?&lt;/h1&gt;
+&lt;h2 id="what-we-need-for-windows"&gt;What we need (for Windows)?&lt;/h2&gt;
 &lt;p&gt;We need:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Obsidian (of course, where we will be writing our posts)&lt;/li&gt;
@@ -12,13 +12,4 @@
 &lt;li&gt;Python (obviously a legend)&lt;/li&gt;
 &lt;li&gt;PowerShell (I am Windows geek. Not safe, I know!)&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h1 id="step-0-installing-go-git-hugo-python"&gt;Step 0: Installing Go, Git, Hugo, Python&lt;/h1&gt;
-&lt;h4 id="only-for-windows-i-cant-afford-macos-and-linux-sure-but-no"&gt;Only for Windows! (I can&amp;rsquo;t afford MacOS, and Linux sure&amp;hellip; but no.)&lt;/h4&gt;
-&lt;ol&gt;
-&lt;li&gt;Go: &lt;a href="https://go.dev/doc/install"&gt;https://go.dev/doc/install&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Hugo: &lt;code&gt;winget install Hugo.Hugo.Extended&lt;/code&gt; or download from here: &lt;a href="https://gohugo.io/installation/windows/"&gt;https://gohugo.io/installation/windows/&lt;/a&gt; (If you manually download, you may want to add environment path)&lt;/li&gt;
-&lt;li&gt;Git: &lt;a href="https://git-scm.com/"&gt;https://git-scm.com/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;Python: &lt;a href="https://www.python.org/downloads/"&gt;https://www.python.org/downloads/&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h1 id="step-1-install-and-setup-obsidian"&gt;Step 1: Install and Setup Obsidian&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;Once we install Obsidian, open it and then:&lt;/strong&gt;&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;If you don&amp;rsquo;t understand anything, use my own GitHub Repository, Stack Overflow, or any LLM model.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>

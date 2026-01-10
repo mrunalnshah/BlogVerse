@@ -6,15 +6,15 @@ tags:
   - first-blog
   - how-setup-blogging-site
   - utility
-toc: true
+toc: false
 ---
-# My First Blog
+## My First Blog
 This is my first blog. So...Hello!
 
 # What is BlogVerse
 BlogVerse is my personal blogging website where I publish my blogs. This is a sync between Obsidian, Hugo and GitHub Pages. 
 
-# What we need (for Windows)?
+## What we need (for Windows)?
 We need:
 1. Obsidian (of course, where we will be writing our posts)
 2. Go (Golang. A language used for Hugo)
@@ -23,15 +23,21 @@ We need:
 5. Python (obviously a legend)
 6. PowerShell (I am Windows geek. Not safe, I know!)
 
-# Step 0: Installing Go, Git, Hugo, Python
 
-#### Only for Windows! (I can't afford MacOS, and Linux sure... but no.)
+***If you don't understand anything, use my own GitHub Repository, Stack Overflow, or any LLM model.*** 
+
+**My GitHub Repo:** https://github.com/mrunalnshah/BlogVerse
+
+~~LET US BEGIN...~~
+## Step 0: Installing Go, Git, Hugo, Python
+
+### Only for Windows! (I can't afford MacOS, and Linux sure... but no.)
 1. Go: https://go.dev/doc/install
 2. Hugo: `winget install Hugo.Hugo.Extended` or download from here: https://gohugo.io/installation/windows/ (If you manually download, you may want to add environment path)
 3. Git: https://git-scm.com/
 4. Python: https://www.python.org/downloads/
 
-# Step 1: Install and Setup Obsidian
+## Step 1: Install and Setup Obsidian
 **Once we install Obsidian, open it and then:**
 1. Create a Vault named `BlogVerse` at a location where you want to keep all your posts.
 2. Create a folder inside the `BlogVerse` vault naming `posts` (you can name it anything btw).
@@ -39,8 +45,8 @@ We need:
 4. Inside `BlogVerse/posts` create your first post. (maybe copy this post, because why not?)
 5. Congratulations you have written your first post, and this is where you write your posts.
 
-# Step 2: Create a Hugo Instance and Push it to GitHub
-## Step 2.1 Create Hugo Instance
+## Step 2: Create a Hugo Instance and Push it to GitHub
+### Step 2.1 Create Hugo Instance
 This step is going to be your website made by `hugo`:
 1. Create a folder named `BlogVerse` (yeah everything needs to be named `BlogVerse`) at a location where you want your website to exists. (NOT REQUIRED as hugo makes it's own new folder)
 2. Open the terminal inside the folder `BlogVerse\` and run this command: `hugo new site BlogVerse`.  (This will create a new hugo instance in a folder named `BlogVerse`).
@@ -48,7 +54,7 @@ This step is going to be your website made by `hugo`:
 4. Create a `images` folder inside `BlogVerse\static\`
 5. Your website is ready to go? (NOT yet! we need a very beautiful theme)
 
-## Step 2.2 Use a theme from Hugo themes
+### Step 2.2 Use a theme from Hugo themes
 Thanks to active community, we get use-and-run themes for ourselves which are highly customizable. Here is the website: https://themes.gohugo.io/
 
 1. Select any theme you like. I choose `Archie`. Website: https://themes.gohugo.io/themes/archie/
@@ -59,7 +65,7 @@ Thanks to active community, we get use-and-run themes for ourselves which are hi
 	3. Step 3: You will find a `Config of the Demo Site` or anything `Config`, Copy and Replace it into your `BlogVerse\hugo.toml`.  **(MOST REQUIRED)**
 4. Now you have a theme ready.
 
-## Step 2.3 Push everything to GitHub
+### Step 2.3 Push everything to GitHub
 It's a controversial step, people would say first create a setup to first copy the posts from Obsidian path to the Hugo website. I would say, whatever.
 
 1. Just open `GitHub Desktop`. (You can do it using command line, but I prefer GitHub Desktop where i don't need to use command line).
@@ -69,7 +75,7 @@ It's a controversial step, people would say first create a setup to first copy t
 
 Why this is better? It removes the requirement for us to generate a SSH key required to give access to GitHub. GitHub Desktop does everything by itself.
 
-# Step 3: Create an automation mechanism
+## Step 3: Create an automation mechanism
 Here, We are going to write a python script, and a command line to copy files and all data attached to the website. The Python script will then replace the existing image path with respective website path so we can show images in our webpages.
 
 1. Use the robocopy function to copy the whole folder in our `BlogVerse\posts` to our `SITENAME\content\posts`: 
@@ -126,14 +132,14 @@ print("Markdown files processed and images copied successfully.")
 
 DONE!!!!.
 
-# Step 4: RUN
+## Step 4: RUN
 1. Write a post in Obsidian, add images to image folder.
 2. Run Robocopy cmd
 3. Run Python script.
 4. Check if your static/images contains the images? If yes, you are ready to go.
 5. **If the images don’t show up, double-check the paths and configuration. (Use:  🧠)**
 
-# Step 5: Before compiling Hugo Site
+## Step 5: Before compiling Hugo Site
 If you are using `GitHub Pages` for your publishing, and you gonna use it not as your main website like `mrunalnshah.github.io` rather you gonna use `mrunalnshah.github.io/BlogVerse`. Follow me:
 
 1. Open `SITENAME\hugo.toml` and add the script above the file (don't delete anything, just copy this on top of the file)
@@ -318,7 +324,7 @@ Also just in case, Cross-check your `BlogVerse\.github\workflow\static.yml` with
 
 DONE!!!
 
-# Step 6: Build with Hugo:
+## Step 6: Build with Hugo:
 1. Use This command to run the hugo website always:
 
 ***Change Required!***
@@ -326,13 +332,13 @@ DONE!!!
 hugo --gc --minify --baseURL "https://mrunalnshah.github.io/BlogVerse/"
 ```
 2. You can see a new "local" server is also made, you can check it. 
-# Step 7: Open GitHub Account on Browser
+## Step 7: Open GitHub Account on Browser
 1. Go to your repository we created for hosting website `BlogVerse` (in my case!)
 2. Go to `Settings > Pages > Build and deployment`
 3. In `Source`, Select `GitHub Actions`
 4. DONE!!!
 
-# Step 8: Push
+## Step 8: Push
 Open GitHub Desktop and Push the code to the repository. After pushing, you need to wait for seconds or minutes (Hugo is fast, so won't take a lot of time). You can open the GitHub Repository and see the process. 
 
 **Check status here: *pending***
@@ -340,7 +346,7 @@ Open GitHub Desktop and Push the code to the repository. After pushing, you need
 
 Once done. You will be able to access your `BlogVerse` at `https://mrunalnshah.github.io/BlogVerse`. (obviously change your username and repo name)
 
-# Step 9: What you need to do after every step?
+## Step 9: What you need to do after every step?
 So you do need to use:
 1. `robocopy "PATH-TO-YOUR-OBSIDIAN-BLOG-POSTS-FOLDER" "PATH-TO-HUGO-SITENAME\content\posts" /mir`
 2. python script

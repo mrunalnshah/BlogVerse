@@ -21,29 +21,27 @@ pygmentscodefencesguesssyntax = true
 [params]
 	mode="auto" # color-mode → light,dark,toggle or auto
 	useCDN=false # don't use CDNs for fonts and icons, instead serve them locally.
-	subtitle = "Welcome."
+	subtitle = "Welcome to BlogVerse."
 	mathjax = true # enable MathJax support
 	katex = true # enable KaTeX support
 
 # Social Tags
-
 [[params.social]]
 name = "GitHub"
 icon = "github"
 url = "https://github.com/mrunalnshah/"
 
 [[params.social]]
-name = "Twitter"
-icon = "twitter"
-url = "https://twitter.com/mrunalnshah/"
+name = "LinkedIn"
+icon = "linkedin"
+url = "https://linkedin.com/in/mrunalnshah/"
 
 [[params.social]]
-name = "GitLab"
-icon = "gitlab"
-url = "https://gitlab.com/mrunalnshah/"
+name = "Email"
+icon = "mail"
+url = "mailto:mrunalnshah2883@gmail.com"
 
 # Main menu Items
-
 [[menu.main]]
 name = "Home"
 url = "/"
@@ -53,11 +51,6 @@ weight = 1
 name = "All posts"
 url = "/posts"
 weight = 2
-
-[[menu.main]]
-name = "About"
-url = "/about"
-weight = 3
 
 [[menu.main]]
 name = "Tags"
