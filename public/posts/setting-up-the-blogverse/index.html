@@ -1,0 +1,217 @@
+<!doctype html><html><head lang=en><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><title>BlogVerse and its setup - mrunalnshah</title><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="How to setup the blog site with Obsidian, Hugo and GitHub Pages"><meta property="og:image" content><meta property="og:url" content="https://mrunalnshah.github.io/BlogVerse/posts/setting-up-the-blogverse/"><meta property="og:site_name" content="mrunalnshah"><meta property="og:title" content="BlogVerse and its setup"><meta property="og:description" content="How to setup the blog site with Obsidian, Hugo and GitHub Pages"><meta property="og:locale" content="en_us"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2026-01-09T00:00:00+00:00"><meta property="article:modified_time" content="2026-01-09T00:00:00+00:00"><meta property="article:tag" content="First-Blog"><meta property="article:tag" content="How-Setup-Blogging-Site"><meta property="article:tag" content="Utility"><meta name=twitter:card content="summary"><meta name=twitter:title content="BlogVerse and its setup"><meta name=twitter:description content="How to setup the blog site with Obsidian, Hugo and GitHub Pages"><link href=https://mrunalnshah.github.io/BlogVerse/css/fonts.11a1877508139eac0b5b4852ceb110c35641b3533321e66e39149e901ed5756b.css rel=stylesheet><link rel=stylesheet type=text/css media=screen href=https://mrunalnshah.github.io/BlogVerse/css/main.2d8b5d025466bd6ddaba53abadd82452f7b979866a58623830289b480f93bb3b.css><link id=darkModeStyle rel=stylesheet type=text/css href=https://mrunalnshah.github.io/BlogVerse/css/dark.3cc53e265be0aadc134ff08f276085599313959408ee8c32d9cf35ce71670fff.css media="(prefers-color-scheme: dark)"><script type=text/javascript src=https://mrunalnshah.github.io/BlogVerse/js/MathJax.js></script><script type=text/x-mathjax-config>
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script><link rel=stylesheet href=https://mrunalnshah.github.io/BlogVerse/katex/katex.min.css><script defer src=https://mrunalnshah.github.io/BlogVerse/katex/katex.min.js></script><script defer src=https://mrunalnshah.github.io/BlogVerse/katex/auto-render.min.js onload=renderMathInElement(document.body)></script><script>document.addEventListener("DOMContentLoaded",function(){renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1}]})})</script></head><body><div class=content><header><div class=main><a href=https://mrunalnshah.github.io/>mrunalnshah</a></div><nav><a href=https://mrunalnshah.github.io/BlogVerse/>Home</a>
+<a href=https://mrunalnshah.github.io/BlogVerse/posts>All posts</a>
+<a href=https://mrunalnshah.github.io/BlogVerse/about>About</a>
+<a href=https://mrunalnshah.github.io/BlogVerse/tags>Tags</a></nav></header><main><article><div class=post-container><div class=post-content><div class=title><h1 class=title>BlogVerse and its setup</h1><div class=meta>Posted on Jan 9, 2026</div></div><section class=body><h1 id=my-first-blog>My First Blog</h1><p>This is my first blog. So&mldr;Hello!</p><h1 id=what-is-blogverse>What is BlogVerse</h1><p>BlogVerse is my personal blogging website where I publish my blogs. This is a sync between Obsidian, Hugo and GitHub Pages.</p><h1 id=what-we-need-for-windows>What we need (for Windows)?</h1><p>We need:</p><ol><li>Obsidian (of course, where we will be writing our posts)</li><li>Go (Golang. A language used for Hugo)</li><li>Git (for a Sync between GitHub and our posts)</li><li>Hugo (A static website generator which comes with many themes&mldr;)</li><li>Python (obviously a legend)</li><li>PowerShell (I am Windows geek. Not safe, I know!)</li></ol><h1 id=step-0-installing-go-git-hugo-python>Step 0: Installing Go, Git, Hugo, Python</h1><h4 id=only-for-windows-i-cant-afford-macos-and-linux-sure-but-no>Only for Windows! (I can&rsquo;t afford MacOS, and Linux sure&mldr; but no.)</h4><ol><li>Go: <a href=https://go.dev/doc/install>https://go.dev/doc/install</a></li><li>Hugo: <code>winget install Hugo.Hugo.Extended</code> or download from here: <a href=https://gohugo.io/installation/windows/>https://gohugo.io/installation/windows/</a> (If you manually download, you may want to add environment path)</li><li>Git: <a href=https://git-scm.com/>https://git-scm.com/</a></li><li>Python: <a href=https://www.python.org/downloads/>https://www.python.org/downloads/</a></li></ol><h1 id=step-1-install-and-setup-obsidian>Step 1: Install and Setup Obsidian</h1><p><strong>Once we install Obsidian, open it and then:</strong></p><ol><li>Create a Vault named <code>BlogVerse</code> at a location where you want to keep all your posts.</li><li>Create a folder inside the <code>BlogVerse</code> vault naming <code>posts</code> (you can name it anything btw).</li><li>Inside the <code>BlogVerse/posts/</code> create a folder named <code>images</code> (to store images).</li><li>Inside <code>BlogVerse/posts</code> create your first post. (maybe copy this post, because why not?)</li><li>Congratulations you have written your first post, and this is where you write your posts.</li></ol><h1 id=step-2-create-a-hugo-instance-and-push-it-to-github>Step 2: Create a Hugo Instance and Push it to GitHub</h1><h2 id=step-21-create-hugo-instance>Step 2.1 Create Hugo Instance</h2><p>This step is going to be your website made by <code>hugo</code>:</p><ol><li>Create a folder named <code>BlogVerse</code> (yeah everything needs to be named <code>BlogVerse</code>) at a location where you want your website to exists. (NOT REQUIRED as hugo makes it&rsquo;s own new folder)</li><li>Open the terminal inside the folder <code>BlogVerse\</code> and run this command: <code>hugo new site BlogVerse</code>. (This will create a new hugo instance in a folder named <code>BlogVerse</code>).</li><li>Create a <code>posts</code> folder inside <code>BlogVerse\content\</code></li><li>Create a <code>images</code> folder inside <code>BlogVerse\static\</code></li><li>Your website is ready to go? (NOT yet! we need a very beautiful theme)</li></ol><h2 id=step-22-use-a-theme-from-hugo-themes>Step 2.2 Use a theme from Hugo themes</h2><p>Thanks to active community, we get use-and-run themes for ourselves which are highly customizable. Here is the website: <a href=https://themes.gohugo.io/>https://themes.gohugo.io/</a></p><ol><li>Select any theme you like. I choose <code>Archie</code>. Website: <a href=https://themes.gohugo.io/themes/archie/>https://themes.gohugo.io/themes/archie/</a></li><li>Click on Download, and follow steps. (Yeah, your theme may have different steps.)</li><li>Let’s follow the steps in <code>Archie</code> theme<ol><li>Step 1: go to <code>themes</code> folder</li><li>Step 2: Run this command <code>git clone https://github.com/athul/archie.git</code></li><li>Step 3: You will find a <code>Config of the Demo Site</code> or anything <code>Config</code>, Copy and Replace it into your <code>BlogVerse\hugo.toml</code>. <strong>(MOST REQUIRED)</strong></li></ol></li><li>Now you have a theme ready.</li></ol><h2 id=step-23-push-everything-to-github>Step 2.3 Push everything to GitHub</h2><p>It&rsquo;s a controversial step, people would say first create a setup to first copy the posts from Obsidian path to the Hugo website. I would say, whatever.</p><ol><li>Just open <code>GitHub Desktop</code>. (You can do it using command line, but I prefer GitHub Desktop where i don&rsquo;t need to use command line).</li><li>Click on <code>Files > Add local repository...</code></li><li>Add the SITENAME and create a new Repo.</li><li>DONE!!!</li></ol><p>Why this is better? It removes the requirement for us to generate a SSH key required to give access to GitHub. GitHub Desktop does everything by itself.</p><h1 id=step-3-create-an-automation-mechanism>Step 3: Create an automation mechanism</h1><p>Here, We are going to write a python script, and a command line to copy files and all data attached to the website. The Python script will then replace the existing image path with respective website path so we can show images in our webpages.</p><ol><li>Use the robocopy function to copy the whole folder in our <code>BlogVerse\posts</code> to our <code>SITENAME\content\posts</code>:</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>	robocopy &#34;PATH-TO-YOUR-OBSIDIAN-BLOG-POSTS-FOLDER&#34; &#34;PATH-TO-HUGO-SITENAME\content\posts&#34; /mir
+</span></span></code></pre></div><p>For Example:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>	robocopy &#34;C:\Users\mrunalnshah\Documents\BlogVerse\posts&#34; &#34;C:\Users\mrunalnshah\BlogVerse\content\posts&#34; /mir
+</span></span></code></pre></div><p>This will copy all the files to your website.</p><ol start=2><li>Use the python code to replace the image links from your blog post to match it with new location where your website images will be stored.</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=display:flex><span><span style=color:#f92672>import</span> os
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> re
+</span></span><span style=display:flex><span><span style=color:#f92672>import</span> shutil
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Paths (using raw strings to handle Windows backslashes correctly)</span>
+</span></span><span style=display:flex><span>posts_dir <span style=color:#f92672>=</span> <span style=color:#e6db74>r</span><span style=color:#e6db74>&#34;PATH-TO-HUGO-SITENAME\content\posts&#34;</span>
+</span></span><span style=display:flex><span>attachments_dir <span style=color:#f92672>=</span> <span style=color:#e6db74>r</span><span style=color:#e6db74>&#34;PATH-TO-HUGO-SITENAME\content\posts\images&#34;</span>
+</span></span><span style=display:flex><span>static_images_dir <span style=color:#f92672>=</span> <span style=color:#e6db74>r</span><span style=color:#e6db74>&#34;PATH-TO-HUGO-SITENAME\static\images&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Step 1: Process each markdown file in the posts directory</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>for</span> filename <span style=color:#f92672>in</span> os<span style=color:#f92672>.</span>listdir(posts_dir):
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> filename<span style=color:#f92672>.</span>endswith(<span style=color:#e6db74>&#34;.md&#34;</span>):
+</span></span><span style=display:flex><span>        filepath <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>join(posts_dir, filename)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>with</span> open(filepath, <span style=color:#e6db74>&#34;r&#34;</span>, encoding<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;utf-8&#34;</span>) <span style=color:#66d9ef>as</span> file:
+</span></span><span style=display:flex><span>            content <span style=color:#f92672>=</span> file<span style=color:#f92672>.</span>read()
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Step 2: Find all image links in the format ![Image Description](/images/Pasted%20image%20...%20.png)</span>
+</span></span><span style=display:flex><span>        images <span style=color:#f92672>=</span> re<span style=color:#f92672>.</span>findall(<span style=color:#e6db74>r</span><span style=color:#e6db74>&#39;\[\[([^]]*\.png)\]\]&#39;</span>, content)
+</span></span><span style=display:flex><span>        
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Step 3: Replace image links and ensure URLs are correctly formatted</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>for</span> image <span style=color:#f92672>in</span> images:
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Prepare the Markdown-compatible link with %20 replacing spaces</span>
+</span></span><span style=display:flex><span>            markdown_image <span style=color:#f92672>=</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;![Image Description](/images/</span><span style=color:#e6db74>{</span>image<span style=color:#f92672>.</span>replace(<span style=color:#e6db74>&#39; &#39;</span>, <span style=color:#e6db74>&#39;%20&#39;</span>)<span style=color:#e6db74>}</span><span style=color:#e6db74>)&#34;</span>
+</span></span><span style=display:flex><span>            content <span style=color:#f92672>=</span> content<span style=color:#f92672>.</span>replace(<span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;[[</span><span style=color:#e6db74>{</span>image<span style=color:#e6db74>}</span><span style=color:#e6db74>]]&#34;</span>, markdown_image)
+</span></span><span style=display:flex><span>            
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Step 4: Copy the image to the Hugo static/images directory if it exist</span>
+</span></span><span style=display:flex><span>            image_source <span style=color:#f92672>=</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>join(attachments_dir, image)
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> os<span style=color:#f92672>.</span>path<span style=color:#f92672>.</span>exists(image_source):
+</span></span><span style=display:flex><span>                shutil<span style=color:#f92672>.</span>copy(image_source, static_images_dir)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#75715e># Step 5: Write the updated content back to the markdown file</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>with</span> open(filepath, <span style=color:#e6db74>&#34;w&#34;</span>, encoding<span style=color:#f92672>=</span><span style=color:#e6db74>&#34;utf-8&#34;</span>) <span style=color:#66d9ef>as</span> file:
+</span></span><span style=display:flex><span>            file<span style=color:#f92672>.</span>write(content)
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>print(<span style=color:#e6db74>&#34;Markdown files processed and images copied successfully.&#34;</span>)
+</span></span></code></pre></div><p>DONE!!!!.</p><h1 id=step-4-run>Step 4: RUN</h1><ol><li>Write a post in Obsidian, add images to image folder.</li><li>Run Robocopy cmd</li><li>Run Python script.</li><li>Check if your static/images contains the images? If yes, you are ready to go.</li><li><strong>If the images don’t show up, double-check the paths and configuration. (Use: 🧠)</strong></li></ol><h1 id=step-5-before-compiling-hugo-site>Step 5: Before compiling Hugo Site</h1><p>If you are using <code>GitHub Pages</code> for your publishing, and you gonna use it not as your main website like <code>mrunalnshah.github.io</code> rather you gonna use <code>mrunalnshah.github.io/BlogVerse</code>. Follow me:</p><ol><li>Open <code>SITENAME\hugo.toml</code> and add the script above the file (don&rsquo;t delete anything, just copy this on top of the file)</li></ol><p><em><strong>Change Required:</strong></em></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>baseURL = &#34;https://mrunalnshah.github.io/BlogVerse/&#34;
+</span></span><span style=display:flex><span>relativeURLs = false
+</span></span><span style=display:flex><span>canonifyURLs = true
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>[caches]
+</span></span><span style=display:flex><span>  [caches.images]
+</span></span><span style=display:flex><span>    dir = &#39;:cacheDir/images&#39;	
+</span></span></code></pre></div><p>This is going to link your <code>BlogVerse</code> or anything you named it, and will generate a new website with images linked.</p><ol start=2><li>Go to <code>SITENAME/.github/workflow</code>, and create a new file named <code>hugo.yml</code> and paste the content in there:</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript3 data-lang=gdscript3><span style=display:flex><span>name: Build <span style=color:#f92672>and</span> deploy
+</span></span><span style=display:flex><span>on:
+</span></span><span style=display:flex><span>  push:
+</span></span><span style=display:flex><span>    branches:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> main
+</span></span><span style=display:flex><span>  workflow_dispatch:
+</span></span><span style=display:flex><span>permissions:
+</span></span><span style=display:flex><span>  contents: read
+</span></span><span style=display:flex><span>  pages: write
+</span></span><span style=display:flex><span>  id<span style=color:#f92672>-</span>token: write
+</span></span><span style=display:flex><span>concurrency:
+</span></span><span style=display:flex><span>  group: pages
+</span></span><span style=display:flex><span>  cancel<span style=color:#f92672>-</span><span style=color:#f92672>in</span><span style=color:#f92672>-</span>progress: false
+</span></span><span style=display:flex><span>defaults:
+</span></span><span style=display:flex><span>  run:
+</span></span><span style=display:flex><span>    shell: bash
+</span></span><span style=display:flex><span>jobs:
+</span></span><span style=display:flex><span>  build:
+</span></span><span style=display:flex><span>    runs<span style=color:#f92672>-</span>on: ubuntu<span style=color:#f92672>-</span>latest
+</span></span><span style=display:flex><span>    env:
+</span></span><span style=display:flex><span>      DART_SASS_VERSION: <span style=color:#ae81ff>1.97</span><span style=color:#f92672>.</span><span style=color:#ae81ff>1</span>
+</span></span><span style=display:flex><span>      GO_VERSION: <span style=color:#ae81ff>1.25</span><span style=color:#f92672>.</span><span style=color:#ae81ff>5</span>
+</span></span><span style=display:flex><span>      HUGO_VERSION: <span style=color:#ae81ff>0.154</span><span style=color:#f92672>.</span><span style=color:#ae81ff>2</span>
+</span></span><span style=display:flex><span>      NODE_VERSION: <span style=color:#ae81ff>24.12</span><span style=color:#f92672>.</span><span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>      TZ: Europe<span style=color:#f92672>/</span>Oslo
+</span></span><span style=display:flex><span>    steps:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Checkout
+</span></span><span style=display:flex><span>        uses: actions<span style=color:#f92672>/</span>checkout<span style=color:#960050;background-color:#1e0010>@</span>v5
+</span></span><span style=display:flex><span>        with:
+</span></span><span style=display:flex><span>          <span style=color:#75715e># submodules: recursive</span>
+</span></span><span style=display:flex><span>          fetch<span style=color:#f92672>-</span>depth: <span style=color:#ae81ff>0</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Setup Go
+</span></span><span style=display:flex><span>        uses: actions<span style=color:#f92672>/</span>setup<span style=color:#f92672>-</span>go<span style=color:#960050;background-color:#1e0010>@</span>v5
+</span></span><span style=display:flex><span>        with:
+</span></span><span style=display:flex><span>          go<span style=color:#f92672>-</span>version: <span style=color:#f92672>$</span>{{ env<span style=color:#f92672>.</span>GO_VERSION }}
+</span></span><span style=display:flex><span>          cache: false
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Setup <span style=color:#a6e22e>Node</span><span style=color:#f92672>.</span>js
+</span></span><span style=display:flex><span>        uses: actions<span style=color:#f92672>/</span>setup<span style=color:#f92672>-</span>node<span style=color:#960050;background-color:#1e0010>@</span>v4
+</span></span><span style=display:flex><span>        with:
+</span></span><span style=display:flex><span>          node<span style=color:#f92672>-</span>version: <span style=color:#f92672>$</span>{{ env<span style=color:#f92672>.</span>NODE_VERSION }}
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Setup Pages
+</span></span><span style=display:flex><span>        id: pages
+</span></span><span style=display:flex><span>        uses: actions<span style=color:#f92672>/</span>configure<span style=color:#f92672>-</span>pages<span style=color:#960050;background-color:#1e0010>@</span>v5
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Create directory <span style=color:#66d9ef>for</span> user<span style=color:#f92672>-</span>specific executable files
+</span></span><span style=display:flex><span>        run: <span style=color:#f92672>|</span>
+</span></span><span style=display:flex><span>          mkdir <span style=color:#f92672>-</span>p <span style=color:#e6db74>&#34;${HOME}/.local&#34;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Install Dart Sass
+</span></span><span style=display:flex><span>        run: <span style=color:#f92672>|</span>
+</span></span><span style=display:flex><span>          curl <span style=color:#f92672>-</span>sLJO <span style=color:#e6db74>&#34;https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz&#34;</span>
+</span></span><span style=display:flex><span>          tar <span style=color:#f92672>-</span>C <span style=color:#e6db74>&#34;${HOME}/.local&#34;</span> <span style=color:#f92672>-</span>xf <span style=color:#e6db74>&#34;dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz&#34;</span>
+</span></span><span style=display:flex><span>          rm <span style=color:#e6db74>&#34;dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz&#34;</span>
+</span></span><span style=display:flex><span>          echo <span style=color:#e6db74>&#34;${HOME}/.local/dart-sass&#34;</span> <span style=color:#f92672>&gt;&gt;</span> <span style=color:#e6db74>&#34;${GITHUB_PATH}&#34;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Install Hugo
+</span></span><span style=display:flex><span>        run: <span style=color:#f92672>|</span>
+</span></span><span style=display:flex><span>          curl <span style=color:#f92672>-</span>sLJO <span style=color:#e6db74>&#34;https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz&#34;</span>
+</span></span><span style=display:flex><span>          mkdir <span style=color:#e6db74>&#34;${HOME}/.local/hugo&#34;</span>
+</span></span><span style=display:flex><span>          tar <span style=color:#f92672>-</span>C <span style=color:#e6db74>&#34;${HOME}/.local/hugo&#34;</span> <span style=color:#f92672>-</span>xf <span style=color:#e6db74>&#34;hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz&#34;</span>
+</span></span><span style=display:flex><span>          rm <span style=color:#e6db74>&#34;hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz&#34;</span>
+</span></span><span style=display:flex><span>          echo <span style=color:#e6db74>&#34;${HOME}/.local/hugo&#34;</span> <span style=color:#f92672>&gt;&gt;</span> <span style=color:#e6db74>&#34;${GITHUB_PATH}&#34;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Verify installations
+</span></span><span style=display:flex><span>        run: <span style=color:#f92672>|</span>
+</span></span><span style=display:flex><span>          echo <span style=color:#e6db74>&#34;Dart Sass: $(sass --version)&#34;</span>
+</span></span><span style=display:flex><span>          echo <span style=color:#e6db74>&#34;Go: $(go version)&#34;</span>
+</span></span><span style=display:flex><span>          echo <span style=color:#e6db74>&#34;Hugo: $(hugo version)&#34;</span>
+</span></span><span style=display:flex><span>          echo <span style=color:#e6db74>&#34;Node.js: $(node --version)&#34;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Install <span style=color:#a6e22e>Node</span><span style=color:#f92672>.</span>js dependencies
+</span></span><span style=display:flex><span>        run: <span style=color:#f92672>|</span>
+</span></span><span style=display:flex><span>          [[ <span style=color:#f92672>-</span>f package<span style=color:#f92672>-</span>lock<span style=color:#f92672>.</span>json <span style=color:#f92672>||</span> <span style=color:#f92672>-</span>f npm<span style=color:#f92672>-</span>shrinkwrap<span style=color:#f92672>.</span>json ]] <span style=color:#f92672>&amp;&amp;</span> npm ci <span style=color:#f92672>||</span> true
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Configure Git
+</span></span><span style=display:flex><span>        run: <span style=color:#f92672>|</span>
+</span></span><span style=display:flex><span>          git config core<span style=color:#f92672>.</span>quotepath false
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Cache restore
+</span></span><span style=display:flex><span>        id: cache<span style=color:#f92672>-</span>restore
+</span></span><span style=display:flex><span>        uses: actions<span style=color:#f92672>/</span>cache<span style=color:#f92672>/</span>restore<span style=color:#960050;background-color:#1e0010>@</span>v4
+</span></span><span style=display:flex><span>        with:
+</span></span><span style=display:flex><span>          path: <span style=color:#f92672>$</span>{{ runner<span style=color:#f92672>.</span>temp }}<span style=color:#f92672>/</span>hugo_cache
+</span></span><span style=display:flex><span>          key: hugo<span style=color:#f92672>-$</span>{{ github<span style=color:#f92672>.</span>run_id }}
+</span></span><span style=display:flex><span>          restore<span style=color:#f92672>-</span>keys:
+</span></span><span style=display:flex><span>            hugo<span style=color:#f92672>-</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Build the site
+</span></span><span style=display:flex><span>        run: <span style=color:#f92672>|</span>
+</span></span><span style=display:flex><span>          hugo \
+</span></span><span style=display:flex><span>            <span style=color:#f92672>--</span>gc \
+</span></span><span style=display:flex><span>            <span style=color:#f92672>--</span>minify \
+</span></span><span style=display:flex><span>            <span style=color:#f92672>--</span>baseURL <span style=color:#e6db74>&#34;${{ steps.pages.outputs.base_url }}/&#34;</span> \
+</span></span><span style=display:flex><span>            <span style=color:#f92672>--</span>cacheDir <span style=color:#e6db74>&#34;${{ runner.temp }}/hugo_cache&#34;</span>
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Cache save
+</span></span><span style=display:flex><span>        id: cache<span style=color:#f92672>-</span>save
+</span></span><span style=display:flex><span>        uses: actions<span style=color:#f92672>/</span>cache<span style=color:#f92672>/</span>save<span style=color:#960050;background-color:#1e0010>@</span>v4
+</span></span><span style=display:flex><span>        with:
+</span></span><span style=display:flex><span>          path: <span style=color:#f92672>$</span>{{ runner<span style=color:#f92672>.</span>temp }}<span style=color:#f92672>/</span>hugo_cache
+</span></span><span style=display:flex><span>          key: <span style=color:#f92672>$</span>{{ steps<span style=color:#f92672>.</span>cache<span style=color:#f92672>-</span>restore<span style=color:#f92672>.</span>outputs<span style=color:#f92672>.</span>cache<span style=color:#f92672>-</span>primary<span style=color:#f92672>-</span>key }}
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Upload artifact
+</span></span><span style=display:flex><span>        uses: actions<span style=color:#f92672>/</span>upload<span style=color:#f92672>-</span>pages<span style=color:#f92672>-</span>artifact<span style=color:#960050;background-color:#1e0010>@</span>v3
+</span></span><span style=display:flex><span>        with:
+</span></span><span style=display:flex><span>          path: <span style=color:#f92672>./</span>public
+</span></span><span style=display:flex><span>  deploy:
+</span></span><span style=display:flex><span>    environment:
+</span></span><span style=display:flex><span>      name: github<span style=color:#f92672>-</span>pages
+</span></span><span style=display:flex><span>      url: <span style=color:#f92672>$</span>{{ steps<span style=color:#f92672>.</span>deployment<span style=color:#f92672>.</span>outputs<span style=color:#f92672>.</span>page_url }}
+</span></span><span style=display:flex><span>    runs<span style=color:#f92672>-</span>on: ubuntu<span style=color:#f92672>-</span>latest
+</span></span><span style=display:flex><span>    needs: build
+</span></span><span style=display:flex><span>    steps:
+</span></span><span style=display:flex><span>      <span style=color:#f92672>-</span> name: Deploy to GitHub Pages
+</span></span><span style=display:flex><span>        id: deployment
+</span></span><span style=display:flex><span>        uses: actions<span style=color:#f92672>/</span>deploy<span style=color:#f92672>-</span>pages<span style=color:#960050;background-color:#1e0010>@</span>v4
+</span></span></code></pre></div><p>Don&rsquo;t uncomment yet, but in case if things don&rsquo;t work, try uncommenting this one line in <code>hugo.yml</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>      - name: Checkout
+</span></span><span style=display:flex><span>        uses: actions/checkout@v5
+</span></span><span style=display:flex><span>        with:
+</span></span><span style=display:flex><span>          # submodules: recursive &lt;----- UNCOMMENT
+</span></span><span style=display:flex><span>          fetch-depth: 0
+</span></span></code></pre></div><p>Also just in case, Cross-check your <code>BlogVerse\.github\workflow\static.yml</code> with mine (Optional):</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-gdscript3 data-lang=gdscript3><span style=display:flex><span>  <span style=color:#75715e># Simple workflow for deploying static content to GitHub Pages</span>
+</span></span><span style=display:flex><span>  name: Deploy <span style=color:#66d9ef>static</span> content to Pages
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  on:
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Runs on pushes targeting the default branch</span>
+</span></span><span style=display:flex><span>    push:
+</span></span><span style=display:flex><span>      branches: [<span style=color:#e6db74>&#34;pages&#34;</span>]
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Allows you to run this workflow manually from the Actions tab</span>
+</span></span><span style=display:flex><span>    workflow_dispatch:
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e># Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages</span>
+</span></span><span style=display:flex><span>  permissions:
+</span></span><span style=display:flex><span>    contents: read
+</span></span><span style=display:flex><span>    pages: write
+</span></span><span style=display:flex><span>    id<span style=color:#f92672>-</span>token: write
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e># Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.</span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e># However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.</span>
+</span></span><span style=display:flex><span>  concurrency:
+</span></span><span style=display:flex><span>    group: <span style=color:#e6db74>&#34;pages&#34;</span>
+</span></span><span style=display:flex><span>    cancel<span style=color:#f92672>-</span><span style=color:#f92672>in</span><span style=color:#f92672>-</span>progress: false
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  jobs:
+</span></span><span style=display:flex><span>    <span style=color:#75715e># Single deploy job since we&#39;re just deploying</span>
+</span></span><span style=display:flex><span>    deploy:
+</span></span><span style=display:flex><span>      environment:
+</span></span><span style=display:flex><span>        name: github<span style=color:#f92672>-</span>pages
+</span></span><span style=display:flex><span>        url: <span style=color:#f92672>$</span>{{ steps<span style=color:#f92672>.</span>deployment<span style=color:#f92672>.</span>outputs<span style=color:#f92672>.</span>page_url }}
+</span></span><span style=display:flex><span>      runs<span style=color:#f92672>-</span>on: ubuntu<span style=color:#f92672>-</span>latest
+</span></span><span style=display:flex><span>      steps:
+</span></span><span style=display:flex><span>        <span style=color:#f92672>-</span> name: Checkout
+</span></span><span style=display:flex><span>          uses: actions<span style=color:#f92672>/</span>checkout<span style=color:#960050;background-color:#1e0010>@</span>v4
+</span></span><span style=display:flex><span>        <span style=color:#f92672>-</span> name: Setup Pages
+</span></span><span style=display:flex><span>          uses: actions<span style=color:#f92672>/</span>configure<span style=color:#f92672>-</span>pages<span style=color:#960050;background-color:#1e0010>@</span>v5
+</span></span><span style=display:flex><span>        <span style=color:#f92672>-</span> name: Upload artifact
+</span></span><span style=display:flex><span>          uses: actions<span style=color:#f92672>/</span>upload<span style=color:#f92672>-</span>pages<span style=color:#f92672>-</span>artifact<span style=color:#960050;background-color:#1e0010>@</span>v3
+</span></span><span style=display:flex><span>          with:
+</span></span><span style=display:flex><span>            <span style=color:#75715e># Upload entire repository</span>
+</span></span><span style=display:flex><span>            path: <span style=color:#e6db74>&#39;.&#39;</span>
+</span></span><span style=display:flex><span>        <span style=color:#f92672>-</span> name: Deploy to GitHub Pages
+</span></span><span style=display:flex><span>          id: deployment
+</span></span><span style=display:flex><span>          uses: actions<span style=color:#f92672>/</span>deploy<span style=color:#f92672>-</span>pages<span style=color:#960050;background-color:#1e0010>@</span>v4
+</span></span></code></pre></div><p>DONE!!!</p><h1 id=step-6-build-with-hugo>Step 6: Build with Hugo:</h1><ol><li>Use This command to run the hugo website always:</li></ol><p><em><strong>Change Required!</strong></em></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>hugo --gc --minify --baseURL &#34;https://mrunalnshah.github.io/BlogVerse/&#34;
+</span></span></code></pre></div><ol start=2><li>You can see a new &ldquo;local&rdquo; server is also made, you can check it.</li></ol><h1 id=step-7-open-github-account-on-browser>Step 7: Open GitHub Account on Browser</h1><ol><li>Go to your repository we created for hosting website <code>BlogVerse</code> (in my case!)</li><li>Go to <code>Settings > Pages > Build and deployment</code></li><li>In <code>Source</code>, Select <code>GitHub Actions</code></li><li>DONE!!!</li></ol><h1 id=step-8-push>Step 8: Push</h1><p>Open GitHub Desktop and Push the code to the repository. After pushing, you need to wait for seconds or minutes (Hugo is fast, so won&rsquo;t take a lot of time). You can open the GitHub Repository and see the process.</p><p>Once done. You will be able to access your <code>BlogVerse</code> at <code>https://mrunalnshah.github.io/BlogVerse</code>. (obviously change your username and repo name)</p><h1 id=step-9-what-you-need-to-do-after-every-step>Step 9: What you need to do after every step?</h1><p>So you do need to use:</p><ol><li><code>robocopy "PATH-TO-YOUR-OBSIDIAN-BLOG-POSTS-FOLDER" "PATH-TO-HUGO-SITENAME\content\posts" /mir</code></li><li>python script</li><li><code>hugo --gc --minify --baseURL "https://mrunalnshah.github.io/BlogVerse/"</code></li><li>Push to GitHub Repo using GitHub Desktop (1 click action)</li></ol><p>Your post will be deployed on your website like <code>mrunalnshah.github.io/BlogVerse/</code></p><h2 id=thanks-to-powershell-we-can-automate>Thanks to PowerShell, we can automate.</h2><p>I haven&rsquo;t done it yet. I just use this 3 commands for now. If i were to shorten this process making a MEGA Script for PowerShell to automate, I will update this blog and post it here!</p><p>If you make a Mega Script, help me add it here!</p><p><em><strong>Thanks and all hail open source,</strong></em>
+Mrunal Nirajkumar Shah.</p></section><div class=post-tags><nav class="nav tags"><ul class=tags><li><a href=https://mrunalnshah.github.io/BlogVerse/tags/first-blog/>first-blog</a></li><li><a href=https://mrunalnshah.github.io/BlogVerse/tags/how-setup-blogging-site/>how-setup-blogging-site</a></li><li><a href=https://mrunalnshah.github.io/BlogVerse/tags/utility/>utility</a></li></ul></nav></div></div><div class=toc><strong>Table of contents:</strong><nav id=TableOfContents><ul><li><ul><li></li></ul></li></ul><ul><li><a href=#step-21-create-hugo-instance>Step 2.1 Create Hugo Instance</a></li><li><a href=#step-22-use-a-theme-from-hugo-themes>Step 2.2 Use a theme from Hugo themes</a></li><li><a href=#step-23-push-everything-to-github>Step 2.3 Push everything to GitHub</a></li></ul><ul><li><a href=#thanks-to-powershell-we-can-automate>Thanks to PowerShell, we can automate.</a></li></ul></nav></div></div></article></main><footer><div style=display:flex><a class=soc href=https://github.com/mrunalnshah/ rel=me title=GitHub><svg class="feather"><use href="https://mrunalnshah.github.io/BlogVerse/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github"/></svg></a><a class=border></a><a class=soc href=https://twitter.com/mrunalnshah/ rel=me title=Twitter><svg class="feather"><use href="https://mrunalnshah.github.io/BlogVerse/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#twitter"/></svg></a><a class=border></a><a class=soc href=https://gitlab.com/mrunalnshah/ rel=me title=GitLab><svg class="feather"><use href="https://mrunalnshah.github.io/BlogVerse/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#gitlab"/></svg></a><a class=border></a></div><div class=footer-info>2026 © mrunalnshah | <a href=https://github.com/athul/archie>Archie Theme</a> | Built with <a href=https://gohugo.io>Hugo</a></div></footer></div></body></html>
