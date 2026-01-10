@@ -1,4 +1,7 @@
-baseURL = "https://mrunalnshah.github.io/"
+baseURL = "https://mrunalnshah.github.io/BlogVerse/"
+relativeURLs = false
+canonifyURLs = true
+
 languageCode = "en-us"
 title = "mrunalnshah"
 theme="archie"
