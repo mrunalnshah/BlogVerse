@@ -335,6 +335,9 @@ hugo --gc --minify --baseURL "https://mrunalnshah.github.io/BlogVerse/"
 # Step 8: Push
 Open GitHub Desktop and Push the code to the repository. After pushing, you need to wait for seconds or minutes (Hugo is fast, so won't take a lot of time). You can open the GitHub Repository and see the process. 
 
+**Check status here: *pending***
+!![Image Description](/images/blog-upload-pending-status.png)
+
 Once done. You will be able to access your `BlogVerse` at `https://mrunalnshah.github.io/BlogVerse`. (obviously change your username and repo name)
 
 # Step 9: What you need to do after every step?
