@@ -7,7 +7,7 @@ toc: true
 ---
 # Mrunal
 
-Hello World
+Hello World. I am gonna make blogs in obsidian and with just a simple robocopy, and python script i am going to publish using hugo.
 
 
 
