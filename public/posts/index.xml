@@ -1,4 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mrunalnshah</title><link>https://mrunalnshah.github.io/BlogVerse/posts/</link><description>Recent content in Posts on mrunalnshah</description><generator>Hugo</generator><language>en-us</language><copyright>© mrunalnshah</copyright><lastBuildDate>Fri, 09 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mrunalnshah.github.io/BlogVerse/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>BlogVerse and its setup</title><link>https://mrunalnshah.github.io/BlogVerse/posts/setting-up-the-blogverse/</link><pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate><guid>https://mrunalnshah.github.io/BlogVerse/posts/setting-up-the-blogverse/</guid><description>&lt;h2 id="my-first-blog"&gt;My First Blog&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on mrunalnshah</title><link>https://mrunalnshah.github.io/BlogVerse/posts/</link><description>Recent content in Posts on mrunalnshah</description><generator>Hugo</generator><language>en-us</language><copyright>© mrunalnshah</copyright><lastBuildDate>Fri, 16 Jan 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://mrunalnshah.github.io/BlogVerse/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Setup Quartz with Obsidian to deploy on GitHub Pages</title><link>https://mrunalnshah.github.io/BlogVerse/posts/setup-obsidian-github-pages-and-quartz/</link><pubDate>Fri, 16 Jan 2026 00:00:00 +0000</pubDate><guid>https://mrunalnshah.github.io/BlogVerse/posts/setup-obsidian-github-pages-and-quartz/</guid><description>&lt;h1 id="introduction"&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;How to deploy a website with a sync with GitHub Repository using Quartz.&lt;/p&gt;
+&lt;h2 id="what-we-need-for-windows"&gt;What we need (for Windows)?&lt;/h2&gt;
+&lt;p&gt;We need:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Official documentation: &lt;a href="https://quartz.jzhao.xyz/"&gt;https://quartz.jzhao.xyz/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://nodejs.org/en"&gt;Node.js&lt;/a&gt; v22&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;del&gt;LET US BEGIN&amp;hellip;&lt;/del&gt;&lt;/p&gt;
+&lt;h2 id="step-1-cloning-repository"&gt;Step 1: Cloning Repository&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Run PowerShell / Terminal in admin mode only&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Clone the Quartz Repository (at your location where you want to save your website):
+&lt;code&gt;git clone https://github.com/jackyzha0/quartz.git&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="step-2-move-into-cloned-repo"&gt;Step 2: Move into Cloned Repo&lt;/h2&gt;
+&lt;p&gt;command: &lt;code&gt;cd quartz&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id="step-3-run-node-command-to-create-quartz-instance"&gt;Step 3: Run Node Command to Create Quartz Instance&lt;/h2&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;Do not run &lt;code&gt;npm audit fix&lt;/code&gt;. This will break stuff.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;</description></item><item><title>BlogVerse and its setup</title><link>https://mrunalnshah.github.io/BlogVerse/posts/setting-up-the-blogverse/</link><pubDate>Fri, 09 Jan 2026 00:00:00 +0000</pubDate><guid>https://mrunalnshah.github.io/BlogVerse/posts/setting-up-the-blogverse/</guid><description>&lt;h2 id="my-first-blog"&gt;My First Blog&lt;/h2&gt;
 &lt;p&gt;This is my first blog. So&amp;hellip;Hello!&lt;/p&gt;
 &lt;h1 id="what-is-blogverse"&gt;What is BlogVerse&lt;/h1&gt;
 &lt;p&gt;BlogVerse is my personal blogging website where I publish my blogs. This is a sync between Obsidian, Hugo and GitHub Pages.&lt;/p&gt;
