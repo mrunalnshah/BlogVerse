@@ -1,6 +1,6 @@
 ---
-title: How to Setup Quartz with Obsidian to deploy on GitHub Pages
-description: How to setup the website with Obsidian, GitHub and Quartz 4
+title: Algorithm's Digital Garden and its Setup
+description: How to Setup Quartz 4 Website with Obsidian to deploy on GitHub Pages
 date: 2026-01-16
 tags:
   - how-setup-blogging-site
@@ -8,7 +8,7 @@ tags:
 toc: false
 ---
 # Introduction
-How to deploy a website with a sync with GitHub Repository using Quartz. 
+How to deploy a website with a sync with GitHub Repository using Quartz 4. 
 
 ## What we need (for Windows)?
 We need:
@@ -102,6 +102,77 @@ RUN: `npx quartz sync --no-pull`
 ## Step 10: Deploy to GitHub Pages?
 1. Head to “Settings” tab of your forked repository and in the sidebar, click “Pages”. Under “Source”, select “GitHub Actions”.
 2. Commit these changes by doing `npx quartz sync`. This should deploy your site to `<github-username>.github.io/<repository-name>`.
+
+## Bonus Step: How to apply themes?
+1. go to website: https://github.com/saberzero1/quartz-themes
+2. Select a theme from `supported-themes` 
+3. once you select your theme, remember `Obsidian Theme Name`
+4. go to `.github\workflows` and open `deploy.yml`
+5. Add the following lines to your `deploy.yml` before the `permissions` section: (Change `<THEME-NAME>` to `latex` or Your selected theme.)
+``` yaml
+env:
+  THEME_NAME: <THEME-NAME>
+```
+6. And add the following lines to your `deploy.yml` before the `build` step: (No Need to change anything, not even `$THEME_NAME`)
+```yaml
+- name: Fetch Quartz Theme
+  run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
+```
+
+***FULL `deploy.yml` CODE with `latex` theme***
+``` yaml
+name: Algorithms by mrunalnshah to GitHub Pages
+ 
+on:
+  push:
+    branches:
+      - v4
+      
+env:
+  THEME_NAME: latex
+ 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+ 
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+ 
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all history for git info
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Dependencies
+        run: npm ci
+      - name: Fetch Quartz Theme
+        run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
+      - name: Build Quartz
+        run: npx quartz build
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+ 
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
 
 ***Thanks and all hail open source,***
 Mrunal Nirajkumar Shah.
