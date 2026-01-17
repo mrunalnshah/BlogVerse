@@ -374,5 +374,5 @@ If you make a Mega Script, help me add it here!
 7. Go back to the previous website to click `verify`.
 8. Done!
 
-***Thanks and all hail open source,***
+***Thanks and all hail open source,***  
 Mrunal Nirajkumar Shah.

@@ -103,7 +103,7 @@ RUN: `npx quartz sync --no-pull`
 1. Head to “Settings” tab of your forked repository and in the sidebar, click “Pages”. Under “Source”, select “GitHub Actions”.
 2. Commit these changes by doing `npx quartz sync`. This should deploy your site to `<github-username>.github.io/<repository-name>`.
 
-## Bonus Step: How to apply themes?
+## Step 11: How to apply themes?
 1. go to website: https://github.com/saberzero1/quartz-themes
 2. Select a theme from `supported-themes` 
 3. once you select your theme, remember `Obsidian Theme Name`
@@ -174,5 +174,15 @@ jobs:
 ```
 
 
-***Thanks and all hail open source,***
+## Bonus Step: Changing the theme in the theme
+There will be time when you don't like some part of the theme, or maybe don't like its colors. When that scenario arise, you don't change the theme all together, rather edit the theme.
+
+***To edit theme, you need to know CSS.***
+
+1. Go to: `\quartz\styles\custom.scss`
+2. Add your CSS here. 
+
+**Big Question:** How to know class-id, and attribute names? ***I would suggest to publish the website, open inspector in browser and open styles in it, and edit there and see what you need to add in your `custom.scss` to get the same result. (My Opinion).***
+
+***Thanks and all hail open source,***  
 Mrunal Nirajkumar Shah.
