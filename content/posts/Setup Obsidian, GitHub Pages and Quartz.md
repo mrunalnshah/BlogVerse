@@ -1,5 +1,5 @@
 ---
-title: Algorithm's Digital Garden and its Setup
+title: Setup Obsidian, GitHub pages and Quartz4 in sync.
 description: How to Setup Quartz 4 Website with Obsidian to deploy on GitHub Pages
 date: 2026-01-16
 tags:
@@ -102,6 +102,7 @@ RUN: `npx quartz sync --no-pull`
 ## Step 10: Deploy to GitHub Pages?
 1. Head to “Settings” tab of your forked repository and in the sidebar, click “Pages”. Under “Source”, select “GitHub Actions”.
 2. Commit these changes by doing `npx quartz sync`. This should deploy your site to `<github-username>.github.io/<repository-name>`.
+3. **Remember:** Every time you wish to deploy, Open `PowerShell` as run as administrator, and then go to website link and run `npx quartz sync`.
 
 ## Step 11: How to apply themes?
 1. go to website: https://github.com/saberzero1/quartz-themes
