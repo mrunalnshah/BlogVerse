@@ -355,9 +355,40 @@ So you do need to use:
 
 Your post will be deployed on your website like `mrunalnshah.github.io/BlogVerse/`
 ## Thanks to PowerShell, we can automate.
-I haven't done it yet. I just use this 3 commands for now. If i were to shorten this process making a MEGA Script for PowerShell to automate, I will update this blog and post it here!
+I have written a script for Windows. For this script to run, you need a to copy this script into a file named `push.ps1` which should be stored at your `PATH-TO-HUGO-SITE-DIRECTORY`, where we stored `images.py`.
 
-If you make a Mega Script, help me add it here!
+``` PowerShell
+#!/usr/bin/env pwsh
+$ErrorActionPreference = "stop"
+
+Write-Host "Building BlogVerse..."
+
+# Detect os
+$IsWindows = $env:OS -eq "Windows_NT"
+
+if ($IsWindows) {
+	Write-Host "Detected Windows"
+	
+	# Change Path Here
+	$SrcPost = "C:\Users\mruna\Documents\Learnaholic\Blogs & Posts\posts"
+	$DstPost = "C:\Users\mruna\Documents\Portfolio\BlogVerse\content\posts"
+	
+	Write-Host "Syncing posts & images with robocopy..."
+	robocopy "$SrcPost" "$DstPost" /mir | Out-Null
+} else {
+	Write-Error "Unsupported operating system"
+}
+
+Write-Host "Running Image processing..."
+python images.py
+
+Write-Host "Building Hugo Site"
+hugo --gc --minify --baseURL "https://mrunalnshah.github.io/BlogVerse/"
+
+Write-Host "Done!"
+```
+
+You just need to run this script, and push the code from GitHub Desktop. (I used the script to push this update!)
 ## Bonus Step: Get yourself on Google Search
 1. Go to: https://search.google.com/search-console/about
 2. Click `Start now`
